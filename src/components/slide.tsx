@@ -47,8 +47,8 @@ const slideData = [
         image: "https://s3-alpha-sig.figma.com/img/bd9b/3108/cb36b0b2aebaab8d7bad4ecbedf2a369?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Xx1mI1U-yJ6RmuGEo1mtRxHwwalaBLHZWGd10bTpoVmUionEoDQZuviVQ6WoVzNDOsHl~0yy0ilAOlhE7bkA4vHBJH0DbqU9dwhXfqlk6jw1xdyF0f33oy5zbojfG2QWYudfPu~cYNQINXjXYkZuoLCeasONMGowwLq3P1TygHCHF51hwYNk8gOjU0dslJ3zLmSMuhiEV3cmW2V2OTu0zfQmANaaxPYR-14ZtD7PkGhKKhgMQo6kBHsZkBqZQsc-HfhFMCRjiJeSb-UlF5I~pJ1kggf-mor3DrAaPZhP7ikYQBqvZSZnFpga9F46Saa4bffCCrUiL1kG9lJ93vZx2Q__"
     },
     {
-        title: "Track Your Goal",
-        description: "Don’t worry if you have trouble determining your goals, We can help you determine your goals and track your goals",
-        image: "https://s3-alpha-sig.figma.com/img/bd9b/3108/cb36b0b2aebaab8d7bad4ecbedf2a369?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Xx1mI1U-yJ6RmuGEo1mtRxHwwalaBLHZWGd10bTpoVmUionEoDQZuviVQ6WoVzNDOsHl~0yy0ilAOlhE7bkA4vHBJH0DbqU9dwhXfqlk6jw1xdyF0f33oy5zbojfG2QWYudfPu~cYNQINXjXYkZuoLCeasONMGowwLq3P1TygHCHF51hwYNk8gOjU0dslJ3zLmSMuhiEV3cmW2V2OTu0zfQmANaaxPYR-14ZtD7PkGhKKhgMQo6kBHsZkBqZQsc-HfhFMCRjiJeSb-UlF5I~pJ1kggf-mor3DrAaPZhP7ikYQBqvZSZnFpga9F46Saa4bffCCrUiL1kG9lJ93vZx2Q__"
+        title: "Get Burn",
+        description: "Let’s keep burning to achieve your goals, it hurts only temporarily, if you give up now you will be in pain forever",
+        image: "https://s3-alpha-sig.figma.com/img/9958/8bb7/dbf14a6d26ec54e2ba9e71eaef184f6b?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WaF8rMmvfqmePqO8U9FcI-Vj-rIs2-s2wBqi2eQU-eqSg4BT9mcxM9szMdI0l-Wx6339LRlvWmZxTo7DLkPgNY5TDpNfSrytPWvsbs7BQhx-qw579iY9Ku-U4OsgEJy-qrHnYY2XY4U4HdQRO7~bYooqRsx4Gkgy3y0WWQLGAIk3nQrhPuzhv-TaIBHiYpIoxK~S69VrUoN~bjuF3PJJ~MQY~1DYK29We51YBJ6e5P5Aft1AThbXiqrKivz8kn~NTpXZAjX7akU5N1zEPZjeoSl-O80YIJnW8udKSbgEG5nycAgUwlaqL0PdNkqh8wxmcGh3~PmJHFm03Wnmrd0sFA__"
     },
 ]
