@@ -5,7 +5,7 @@ import {useMemo, useState} from "react";
 import "../../node_modules/swiper/swiper-bundle.min.css"
 import {Swiper, SwiperSlide} from "swiper/react"
 
-const WorkSchedule = () => {
+const WorkoutSchedule = () => {
     const today = new Date(Date.now());
     const [month, setMonth] = useState(today);
     const [activeDate, setActiveDate] = useState(today.getDay());
@@ -30,11 +30,10 @@ const WorkSchedule = () => {
         })
     }, [])
 
-    return <div className={"space-y-4 py-4 w-full overflow-hidden"}>
+    return <div className={"space-y-4 pb-4 w-full overflow-hidden"}>
         <div className={"flex justify-center gap-2 tex prose-p:text-xs"}>
             <button onClick={() => {
                 setMonth(subMonths(month, 1))
-
             }}>
                 <BackIcon className={"size-4"} strokeWidth={4}/>
             </button>
@@ -60,9 +59,11 @@ const WorkSchedule = () => {
                     return (
                         <SwiperSlide
                             key={index}
-                            className={"w-16"}
                             onClick={() => {
                                 setActiveDate(date)
+                            }}
+                            style={{
+                                width: "4rem",
                             }}
                         >
                             <button
@@ -91,4 +92,4 @@ const WorkSchedule = () => {
     </div>
 };
 
-export default WorkSchedule;
+export default WorkoutSchedule;

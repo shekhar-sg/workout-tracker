@@ -2,7 +2,7 @@ import {SVGProps} from "react";
 
 interface trackerIconProps extends SVGProps<SVGSVGElement>{}
 
-const TrackerIcon = (props:trackerIconProps) => {
+const ScheduleIcon = (props:trackerIconProps) => {
     return (
         <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"
              {...props}
@@ -20,4 +20,4 @@ const TrackerIcon = (props:trackerIconProps) => {
     );
 };
 
-export default TrackerIcon;
+export default ScheduleIcon;

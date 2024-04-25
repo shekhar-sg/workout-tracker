@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 const Objective = () => {
     return (
         <div className={"prose h-full p-4 flex flex-col gap-4"}>
@@ -37,10 +39,11 @@ const Objective = () => {
                     </label>
                 </form>
             </div>
-            <button
-                className={"mt-auto mb-14 w-full py-3.5 rounded-xl text-white text-base font-semibold bg-gradient-to-r from-indigo-200 to-indigo-400"}>
+            <Link
+                to={"/tracker"}
+                className={"text-center no-underline mt-auto mb-14 w-full py-3.5 rounded-xl text-white text-base font-semibold bg-gradient-to-r from-indigo-200 to-indigo-400"}>
                 Confirm
-            </button>
+            </Link>
         </div>
     );
 };

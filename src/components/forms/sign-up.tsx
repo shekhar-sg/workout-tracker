@@ -1,10 +1,12 @@
+import {Link} from "react-router-dom";
+
 const SignUp = () => {
     return (
-        <div className={"prose h-full p-4 flex flex-col gap-4"}>
+        <div className={"prose h-[100vh] p-4 flex flex-col gap-4"}>
             <h2 className={"self-start font-semibold text-xl mb-6"}>Welcome Back</h2>
             <div
-                className={"flex h-full flex-col prose-a:mt-2 prose-a:text-indigo-300 prose-a:text-xs prose-a:font-medium"}>
-                <form className={"flex flex-col gap-6 w-full"}>
+                className={"flex h-full flex-col "}>
+                <form className={"flex flex-col gap-6 w-full mb-8"}>
                     <div>
                         <input type={"text"} placeholder={"First Name"}
                                className={"peer w-full px-5 py-4 text-sm bg-stone-200 border-none focus:ring-stone-400 rounded-xl"}
@@ -21,25 +23,26 @@ const SignUp = () => {
                         />
                     </div>
                     <div>
-                        {/*adding floating label*/}
                         <input type={"password"} placeholder={"password"}
                                className={"w-full px-5 py-4 text-sm bg-stone-200 border-none focus:ring-stone-400 rounded-xl"}
                         />
-                        <label htmlFor={"password"} className={"text-sm text-stone-400"}>Password</label>
                     </div>
-                    <div className={"flex items-center gap-2 text-xs"}>
+                    <div className={"flex items-center gap-2 text-xs prose-a:text-indigo-400"}>
                         <input type={"checkbox"}
                                className={"w-5 h-5 text-indigo-400 focus:ring-0 transition-colors duration-300 rounded-md"}/>
-                        <label htmlFor={"checkbox"}>By proceeding, I agree to all <a>T&C</a> and <a>Privacy
-                            Policy</a></label>
+                        <label htmlFor={"checkbox"}>By proceeding, I agree to all <Link to={"#"}>T&C</Link> and <Link
+                            to={"#"}
+                        >Privacy
+                            Policy</Link></label>
                     </div>
                 </form>
-                <button
-                    className={"mt-auto py-3.5 rounded-xl text-white text-base font-semibold bg-gradient-to-r from-indigo-200 to-indigo-400"}>Sign
-                    In
-                </button>
+                <Link
+                    to={"/"}
+                    className={"text-center no-underline mt-auto py-3.5 rounded-xl text-white text-md font-semibold bg-gradient-to-r from-indigo-200 to-indigo-400"}>
+                    Create An Account
+                </Link>
             </div>
-            <div className={"space-y-5 mt-auto"}>
+            <div className={"space-y-5 mt-auto mb-4"}>
                 <div className={"divider"}>or</div>
                 <div className={"flex justify-center gap-5 w-full"}>
                     <button className={"h-11 w-11 p-3 ring-1 ring-neutral-500 rounded-md"}>
@@ -71,7 +74,7 @@ const SignUp = () => {
                     </button>
                 </div>
                 <p className={"font-medium text-xs prose-a:text-indigo-400 text-center"}>Already have an account?
-                    <a href={"/"}> Login</a>
+                    <Link to={"/login"}> Login</Link>
                 </p>
             </div>
         </div>
