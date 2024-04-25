@@ -5,7 +5,7 @@ const Header = () => {
     const location = useLocation()
     const navigate = useNavigate()
     return (
-        <div className={"flex items-center justify-center mb-2 py-4 sticky top-0"}>
+        <div className={"flex items-center justify-center mb-2 py-4 sticky top-0 backdrop-blur-md z-20"}>
             <button className={"absolute left-5"}
                     onClick={() => navigate(-1)}
             >

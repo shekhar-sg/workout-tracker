@@ -6,10 +6,10 @@ const Slide = () => {
     const navigate = useNavigate()
     return (
         <div
-            className={`flex h-full p-4 flex-col items-center gap-16 prose prose-p:text-[16px] prose-a:text-indigo-300 prose-p:leading-5 prose-p:text-gray-500 prose-p:font-medium font-montserrat prose-headings:m-0 prose-headings:text-neutral-800 prose-h2:font-semibold prose-headings:text-xl prose-headings:my-4 prose-img:m-0`}>
+            className={`flex h-screen p-4 flex-col items-center gap-16 prose prose-p:text-[16px] prose-a:text-indigo-300 prose-p:leading-5 prose-p:text-gray-500 prose-p:font-medium font-montserrat prose-headings:m-0 prose-headings:text-neutral-800 prose-h2:font-semibold prose-headings:text-xl prose-headings:my-4 prose-img:m-0`}>
             <Link
                 to={"/"}
-                className={"self-end"}>Skip</Link>
+                className={"self-end mr-2"}>Skip</Link>
             <img
                 width={"282px"} height={"282px"} alt={"img"}
                 src={slideData[slide].image}
@@ -28,7 +28,7 @@ const Slide = () => {
                         navigate("/")
                     }
                 }}
-                className={"size-12 mt-8 mr-1 ring-2 self-end ring-indigo-400 ring-offset-4 rounded-full bg-gradient-to-r from-indigo-200 to-indigo-400"}>
+                className={"size-12 absolute bottom-14 right-8 ring-2 self-end ring-indigo-400 ring-offset-4 rounded-full bg-gradient-to-r from-indigo-200 to-indigo-400"}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5}
                      stroke="currentColor" className="h-5 mx-auto text-white ">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
