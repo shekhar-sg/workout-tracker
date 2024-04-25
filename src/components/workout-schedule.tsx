@@ -25,7 +25,7 @@ const WorkoutSchedule = () => {
     const hours = useMemo(() => {
         return Array.from({length: 24}, (_, k) => k + 1).map((item) => {
             const tempHour = new Date(month);
-            tempHour.setHours(item);
+            tempHour.setHours(item,0,0,0);
             return format(tempHour, "HH:mm a")
         })
     }, [])

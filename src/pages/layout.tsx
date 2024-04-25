@@ -6,7 +6,11 @@ const Layout = () => {
     return (
         <>
             <Header/>
+            <main
+            className={"mb-32"}
+            >
             <Outlet/>
+            </main>
             <Footer/>
         </>
     );
