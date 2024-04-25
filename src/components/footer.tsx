@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 const Footer = () => {
     return (
         <footer
-            className={"fixed left-0 bottom-0 right-0 w-full h-[76px] flex justify-around gap-16 items-center bg-white"}>
+            className={"max-w-[500px] fixed left-0 bottom-0 right-0 w-full h-[76px] flex justify-around gap-16 items-center bg-white"}>
             <div className={"flex gap-10"}>
                 <Link to={'/'} className={"size-7 rounded-full"}>
                     <HomeIcon/>
