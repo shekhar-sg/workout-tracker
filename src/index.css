@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+    body {
+        @apply prose font-montserrat
+    }
+}
+
+@layer components {
+    .gradient-custom {
+        @apply
+        bg-gradient-to-r from-indigo-100 to-indigo-400
+    }
+
+    .divider {
+        @apply
+        relative flex items-center justify-center gap-10
+        before:absolute
+        before:h-[1px]
+        before:w-[155px]
+        before:bg-stone-400
+        before:left-0
+        before:top-1/2
+        after:absolute
+        after:h-[1px]
+        after:w-[155px]
+        after:bg-stone-400
+        after:right-0
+        after:top-1/2
+    }
+}
