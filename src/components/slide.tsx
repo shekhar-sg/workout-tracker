@@ -6,7 +6,7 @@ const Slide = () => {
     const navigate = useNavigate()
     return (
         <div
-            className={`flex h-screen p-4 flex-col items-center gap-16 prose prose-p:text-[16px] prose-a:text-indigo-300 prose-p:leading-5 prose-p:text-gray-500 prose-p:font-medium font-montserrat prose-headings:m-0 prose-headings:text-neutral-800 prose-h2:font-semibold prose-headings:text-xl prose-headings:my-4 prose-img:m-0`}>
+            className={`flex h-svh p-4 flex-col items-center gap-16 prose prose-p:text-[16px] prose-a:text-indigo-300 prose-p:leading-5 prose-p:text-gray-500 prose-p:font-medium font-montserrat prose-headings:m-0 prose-headings:text-neutral-800 prose-h2:font-semibold prose-headings:text-xl prose-headings:my-4 prose-img:m-0`}>
             <Link
                 to={"/"}
                 className={"self-end mr-2"}>Skip</Link>
