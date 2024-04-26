@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 const Objective = () => {
     return (
-        <div className={"prose h-full p-4 flex flex-col gap-4"}>
+        <div className={"prose h-svh p-4 flex flex-col gap-4"}>
             <h2 className={"self-center font-semibold text-xl mb-6"}>What are your goals?</h2>
             <div
                 className={"flex flex-col prose-a:mt-2 prose-a:text-indigo-300 prose-a:text-xs prose-a:font-medium"}>

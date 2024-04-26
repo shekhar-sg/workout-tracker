@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 const SignUp = () => {
     return (
-        <div className={"prose h-[100vh] p-4 flex flex-col gap-4"}>
+        <div className={"prose h-svh p-4 flex flex-col gap-4"}>
             <h2 className={"self-start font-semibold text-xl mb-6"}>Welcome Back</h2>
             <div
                 className={"flex h-full flex-col "}>

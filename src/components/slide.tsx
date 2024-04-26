@@ -25,7 +25,7 @@ const Slide = () => {
                     if (slide != (slideData.length - 1)) {
                         setSlide(slide + 1)
                     } else {
-                        navigate("/")
+                        navigate("/signup")
                     }
                 }}
                 className={"size-12 absolute bottom-14 right-8 ring-2 self-end ring-indigo-400 ring-offset-4 rounded-full bg-gradient-to-r from-indigo-200 to-indigo-400"}>
