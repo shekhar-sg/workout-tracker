@@ -1,5 +1,6 @@
 import AlertIcon from "../icons/alert-icon.tsx";
 import {Link} from "react-router-dom";
+import WorkoutToggle from "./workout-toggle.tsx";
 
 const WorkoutTracker = () => {
     return (
@@ -26,46 +27,15 @@ const WorkoutTracker = () => {
                                 to={"/schedule"}
                             >See more</Link>
                         </div>
-                        {
-                            schedules.map((schedule, index) => {
-                                return (
-                                    <div key={index}
-                                         className={"flex items-center justify-between px-3 py-2 h-[75px] shadow-lg rounded-xl"}>
-                                        <div className={"flex items-center gap-2"}>
-                                            <img
-                                                src={schedule.image}
-
-                                                alt={"img"}
-                                                className={"size-[50px] rounded-full bg-indigo-200"}/>
-                                            <div className={"flex flex-col gap-1"}>
-                                                <p>{schedule.title}</p>
-                                                <span>{schedule.time}</span>
-                                            </div>
-                                        </div>
-                                        <button>
-                                            <label
-                                                htmlFor={index.toString()}
-                                                className={"flex items-center cursor-pointer select-none"}
-                                            >
-                                                <div className="relative">
-                                                    <input
-                                                        type="checkbox"
-                                                        id={index.toString()}
-                                                        className="peer sr-only"
-                                                    />
-                                                    <div
-                                                        className={"block h-8 rounded-full bg-gray-300 peer-checked:bg-indigo-300 w-14"}
-                                                    ></div>
-                                                    <div
-                                                        className={"absolute w-6 h-6 transition bg-gray-400 rounded-full left-1 top-1 peer-checked:translate-x-full peer-checked:bg-indigo-700"}
-                                                    ></div>
-                                                </div>
-                                            </label>
-                                        </button>
-                                    </div>
-                                )
-                            })
-                        }
+                        <div className={"space-y-3"}>
+                            {
+                                schedules.map((schedule, index) => {
+                                    return (
+                                            <WorkoutToggle key={index} data={{schedule, index}}/>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                     <div className={"space-y-5"}>
                         <h3>What Do You Want to Train</h3>
@@ -92,15 +62,21 @@ const WorkoutTracker = () => {
 
 export default WorkoutTracker;
 
+export interface schedule {
+    title: string;
+    time: string;
+    image: string;
+}
+
 const schedules = [
     {
         title: "Full Body Workout",
         time: "Today 3pm",
-        image: "https://s3-alpha-sig.figma.com/img/4aee/a404/269733701b8604f00f8ab3dbc8874dc4?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YRoQWw1HXgEYtTY7Vg-M2g5IhiKck5VPpcn0Jugib1uL3YWAQL9qngsOoqDKslwiVHm92OampIuJOJkCdMcWDYlxGYqOFHZVpM8s2z1NyIbEcAiKz~icWxqUXjtf4EAuTX9PwtEQlsCSC0eZ1sedcvdPPiuRHDN4gBuCPv2QbJdkmyGb-r7idogspouJ~KeCGnL22lnRm6d3tNchIqngW8S7bW5iSmzqzL9ZwQbhV5Gc~KAC4rG2HVSKRnt9USxdvf6EDrMtSycuyrzitLLWZsB8H3GV-v-dOdoYeRvYsvk7FYyo0Aaj6F-TrXDcnfWOmeBAu9FtArLfMihHELXaSA__"
+        image: "https://s3-alpha-sig.figma.com/img/4aee/a404/269733701b8604f00f8ab3dbc8874dc4?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YRoQWw1HXgEYtTY7Vg-M2g5IhiKck5VPpcn0Jugib1uL3YWAQL9qngsOoqDKslwiVHm92OampIuJOJkCdMcWDYlxGYqOFHZVpM8s2z1NyIbEcAiKz~icWxqUXjtf4EAuTX9PwtEQlsCSC0eZ1sedcvdPPiuRHDN4gBuCPv2QbJdkmyGb-r7idogspouJ~KeCGnL22lnRm6d3tNchIqngW8S7bW5iSmzqzL9ZwQbhV5Gc~KAC4rG2HVSKRnt9USxdvf6EDrMtSycuyrzitLLWZsB8H3GV-v-dOdoYeRvYsvk7FYyo0Aaj6F-TrXDcnfWOmeBAu9FtArLfMihHELXaSA__",
     },
     {
         title: "Upper Body Workout",
         time: "4 Feb, 3:30 pm",
-        image: "https://s3-alpha-sig.figma.com/img/5688/dda6/63ce83a9876ee1cadf652148a636fe39?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LCVi-OLBARFS8CJMirhiIxYuvtOOZKuXaw14X5Bda9jB~plQ49VQ-gXRpxy6n5eIf0BX1e0F3~8sTtcQDAeskGfs635BvILCuh1LslPeKEF1x6tf0uDbiTUMW6CL7m1jhjpvGSKHccWIEL8byxMduA5IC6OCdY-krdwZPuOGk--rJGCSGdxrhH92kbIi2TXOzj89Py2GJWon8AGdX4LrRqfF74z5DG-nml1geYuzL66iXVGnfZXvfKC22y0gO-RlhHmBJsKzioTyRa2sCt5OLcQWS9yohzo1St2vkQmAVr6KCtO-FivraIhKokIBBX4dQf2icqUd-ERUq8C9Fdv0nQ__"
+        image: "https://s3-alpha-sig.figma.com/img/5688/dda6/63ce83a9876ee1cadf652148a636fe39?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LCVi-OLBARFS8CJMirhiIxYuvtOOZKuXaw14X5Bda9jB~plQ49VQ-gXRpxy6n5eIf0BX1e0F3~8sTtcQDAeskGfs635BvILCuh1LslPeKEF1x6tf0uDbiTUMW6CL7m1jhjpvGSKHccWIEL8byxMduA5IC6OCdY-krdwZPuOGk--rJGCSGdxrhH92kbIi2TXOzj89Py2GJWon8AGdX4LrRqfF74z5DG-nml1geYuzL66iXVGnfZXvfKC22y0gO-RlhHmBJsKzioTyRa2sCt5OLcQWS9yohzo1St2vkQmAVr6KCtO-FivraIhKokIBBX4dQf2icqUd-ERUq8C9Fdv0nQ__",
     }
 ]
