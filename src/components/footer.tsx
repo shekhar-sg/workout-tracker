@@ -11,20 +11,20 @@ const Footer = () => {
             className={"max-w-[500px] fixed left-0 bottom-0 right-0 w-full h-[76px] flex justify-around gap-16 items-center bg-white"}>
             <div className={"flex gap-10"}>
                 <Link to={'/'} className={"size-7 rounded-full"}>
-                    <HomeIcon/>
+                    <HomeIcon viewBox={"0 0 30 30"}/>
                 </Link>
                 <Link className={"size-7 rounded-full"}
                       to={"/schedule"}
                 >
-                    <ScheduleIcon/>
+                    <ScheduleIcon viewBox={"0 0 30 30"}/>
                 </Link>
             </div>
             <div className={"flex gap-10"}>
                 <Link to={"#"} className={"size-7 rounded-full"}>
-                    <CameraIcon/>
+                    <CameraIcon viewBox={"0 0 30 30"}/>
                 </Link>
                 <Link to={"/intro"} className={"size-7 rounded-full"}>
-                    <ProfileIcon/>
+                    <ProfileIcon viewBox={"0 0 30 30"}/>
                 </Link>
             </div>
             <Link
