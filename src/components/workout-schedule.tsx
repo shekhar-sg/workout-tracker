@@ -1,5 +1,5 @@
 import BackIcon from "../icons/back-icon.tsx";
-import ForwardIcon from "../icons/forward-icon.tsx";
+import CHe from "../icons/forward-icon.tsx";
 import {addMonths, format, getDaysInMonth, subMonths} from "date-fns";
 import {useMemo, useState} from "react";
 import "../../node_modules/swiper/swiper-bundle.min.css"
@@ -42,7 +42,7 @@ const WorkoutSchedule = () => {
                 setMonth(addMonths(month, 1))
 
             }}>
-                <ForwardIcon className={"size-4"} strokeWidth={4}/>
+                <CHe className={"size-4"} strokeWidth={4}/>
             </button>
         </div>
         <div
