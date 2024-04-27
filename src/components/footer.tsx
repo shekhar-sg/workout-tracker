@@ -1,9 +1,5 @@
-import HomeIcon from "../icons/home-icon.tsx";
-import ScheduleIcon from "../icons/schedule-icon.tsx";
-import CameraIcon from "../icons/camera-icon.tsx";
-import ProfileIcon from "../icons/profile-icon.tsx";
-import SearchIcon from "../icons/searchIcon.tsx";
 import {Link} from "react-router-dom";
+import {CameraIcon, HomeIcon, ProfileIcon, ScheduleIcon, SearchIcon} from "../icons/icons.tsx";
 
 const Footer = () => {
     return (

@@ -1,6 +1,6 @@
-import AlertIcon from "../icons/alert-icon.tsx";
 import {Link} from "react-router-dom";
 import WorkoutToggle from "./workout-toggle.tsx";
+import {AlertIcon} from "../icons/icons.tsx";
 
 const WorkoutTracker = () => {
     return (
