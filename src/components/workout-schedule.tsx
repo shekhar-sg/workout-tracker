@@ -1,9 +1,8 @@
-import BackIcon from "../icons/back-icon.tsx";
-import CHe from "../icons/forward-icon.tsx";
 import {addMonths, format, getDaysInMonth, subMonths} from "date-fns";
 import {useMemo, useState} from "react";
 import "../../node_modules/swiper/swiper-bundle.min.css"
 import {Swiper, SwiperSlide} from "swiper/react"
+import {ChevronLeftIcon, ChevronRightIcon} from "../icons/icons.tsx";
 
 const WorkoutSchedule = () => {
     const today = new Date(Date.now());
@@ -25,7 +24,7 @@ const WorkoutSchedule = () => {
     const hours = useMemo(() => {
         return Array.from({length: 24}, (_, k) => k + 1).map((item) => {
             const tempHour = new Date(month);
-            tempHour.setHours(item,0,0,0);
+            tempHour.setHours(item, 0, 0, 0);
             return format(tempHour, "HH:mm a")
         })
     }, [month])
@@ -35,14 +34,14 @@ const WorkoutSchedule = () => {
             <button onClick={() => {
                 setMonth(subMonths(month, 1))
             }}>
-                <BackIcon className={"size-4"} strokeWidth={4}/>
+                <ChevronLeftIcon className={"size-4"} strokeWidth={4}/>
             </button>
             <p>{format(month, "MMM yyyy")}</p>
             <button onClick={() => {
                 setMonth(addMonths(month, 1))
 
             }}>
-                <CHe className={"size-4"} strokeWidth={4}/>
+                <ChevronRightIcon className={"size-4"} strokeWidth={4}/>
             </button>
         </div>
         <div
