@@ -28,7 +28,7 @@ const WorkoutSchedule = () => {
             tempHour.setHours(item,0,0,0);
             return format(tempHour, "HH:mm a")
         })
-    }, [])
+    }, [month])
 
     return <div className={"space-y-4 pb-4 w-full overflow-hidden"}>
         <div className={"flex justify-center gap-2 tex prose-p:text-xs"}>
@@ -51,6 +51,7 @@ const WorkoutSchedule = () => {
             className={"w-full prose prose-headings:m-0 prose-p:m-0 prose-p:text-xs prose-p:text-gray-900 prose-p:font-semibold"}
             slidesPerView={"auto"}
             spaceBetween={8}
+            initialSlide={today.getDate() - 1}
         >
             {
                 days.map((item, index) => {
